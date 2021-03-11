@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part1</title>
+
+    <style>
+        .container {
+            text-align: center;
+            font-size: 3em;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, 100px);
+        }
+
+        .container__block_1 {
+            background-color: blueviolet;
+        }
+        .container__block_2 {
+            background-color: chartreuse;
+        }
+        .container__block_3 {
+            background-color: coral;
+        }
+        .container__block_4 {
+            background-color: darkseagreen;
+        }
+        .container__block_5 {
+            background-color: goldenrod;
+        }
+        .container__block_6 {
+            background-color: green;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container__block_1">1</div>
+        <div class="container__block_2">2</div>
+        <div class="container__block_3">3</div>
+        <div class="container__block_4">4</div>
+        <div class="container__block_5">5</div>
+        <div class="container__block_6">6</div>
+    </div>
+</body>
+</html>

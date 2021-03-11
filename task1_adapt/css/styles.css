@@ -1,0 +1,136 @@
+.header {
+    grid-area: hd;
+    padding: 2em;
+    justify-items: center;
+    background-color: #80808080;
+}
+
+.aside {
+    grid-area: a;
+    background-color: rgba(85, 240, 85, 0.507);
+    padding: 2em;
+}
+
+.main {
+    grid-area: m;
+    display: grid;
+    background-color: rgb(250, 241, 116);
+}
+
+@media screen and (min-width: 800px) {
+
+    .footer {
+        grid-area: ft;
+        grid-column: 1/5;
+        background-color: #80808080;
+    }
+
+    .container {
+        display: grid;
+        max-width: 100%;
+        max-height: 100vh;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas:
+            "hd hd"
+            "m a"
+            "m a"
+            "ft ft";
+        text-align: center;
+        font-size: 1em;
+
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .footer {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        max-width: 100%;
+        max-height: 80vh;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas:
+            "hd hd"
+            "a a"
+            "m m";
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .header {
+        height: 10vh;
+    }
+
+    .aside {
+        height: 20vh;
+    }
+
+    .main {
+        height: 50vh;
+    }
+
+    .mainname {
+        padding-left: 2em;
+    }
+}
+
+.mainname {
+    padding-top: 2em;
+}
+
+.mainmore {
+    display: grid;
+    padding: 2em;
+    grid-gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.more1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: rgb(255, 195, 83);
+
+}
+
+.more2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: rgb(255, 195, 83);
+
+}
+
+.more3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: rgb(255, 195, 83);
+
+}
+
+.section {
+    margin: 2vw;
+    padding: 2vw;
+    background-color: white;
+
+
+}
+
+.allsections {
+    grid-row: 1/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr;
+}
